@@ -1,0 +1,13 @@
+on:
+  workflow_dispatch:
+
+name: A GitHub Action
+
+jobs:
+  timed_action:
+    name: Job for action
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Hello
+        run: echo "Hello world!"
