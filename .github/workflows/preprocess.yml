@@ -1,12 +1,16 @@
 on:
   workflow_dispatch:
 
-name: A GitHub Action
+name: Pre-process TEMPEST data
 
 jobs:
   timed_action:
-    name: Job for action
+    name: Pre-process TEMPEST data
     runs-on: ubuntu-latest
+    container:
+      image: rocker/tidyverse:4.2
+    permissions:
+      contents: write
     
     steps:
       - name: Hello
