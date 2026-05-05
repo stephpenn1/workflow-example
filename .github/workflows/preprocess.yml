@@ -13,7 +13,11 @@ jobs:
       contents: write
 
     steps:
+      - name: Checkout repo
+        uses: actions/checkout@v6
+
       - name: Hello
         run: echo "Hello world!"
+
       - name: Use R
         run: Rscript --verbose my-script.R
