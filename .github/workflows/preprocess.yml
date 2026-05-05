@@ -15,3 +15,5 @@ jobs:
     steps:
       - name: Hello
         run: echo "Hello world!"
+      - name: Use R
+        run: Rscript -e "head(cars)"
