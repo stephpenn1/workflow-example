@@ -1,19 +1,19 @@
 on:
   workflow_dispatch:
 
-name: Pre-process TEMPEST data
+name: Pre-process data
 
 jobs:
   timed_action:
-    name: Pre-process TEMPEST data
+    name: Process current TEMPEST data
     runs-on: ubuntu-latest
     container:
       image: rocker/tidyverse:4.2
     permissions:
       contents: write
-    
+
     steps:
       - name: Hello
         run: echo "Hello world!"
       - name: Use R
-        run: Rscript -e "head(cars)"
+        run: Rscript --verbose my-script.R
