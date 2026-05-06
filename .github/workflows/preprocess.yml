@@ -13,6 +13,8 @@ jobs:
       contents: write
 
     steps:
+      - run: git config --system --add safe.directory '*'
+
       - name: Checkout repo
         uses: actions/checkout@v6
 
@@ -21,3 +23,11 @@ jobs:
 
       - name: Use R
         run: Rscript --verbose my-script.R
+
+      - name: Commit and push
+        run: |
+          git config --global user.name 'stephpenn1'
+          git config --global user.email 'stephanie.pennington@pnnl.gov'
+          git add .
+          git commit -m "Automated update" || echo "No changes to commit"
+          git push
