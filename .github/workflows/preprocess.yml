@@ -21,6 +21,9 @@ jobs:
       - name: Hello
         run: echo "Hello world!"
 
+      - name: Install rdrop2
+        run: Rscript -e "devtools::install_github('karthik/rdrop2')"
+
       - name: Use R
         run: Rscript --verbose my-script.R
 
