@@ -11,6 +11,6 @@ if(file.exists("tokenfile.RDS")) {
     stop("no token file :(")
 }
 
-rdrop2refreshtoken::drop_auth("tokenfile.RDS")
+rdrop2refreshtoken::drop_auth(new_user = FALSE, rdstoken = "tokenfile.RDS")
 
 #print(rdrop2refreshtoken::drop_dir())
