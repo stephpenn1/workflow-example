@@ -10,3 +10,6 @@ if(file.exists("tokenfile.RDS")) {
     stop("no token file :(")
 }
 
+token <- readRDS("tokenfile.RDS")
+
+print(token)
