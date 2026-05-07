@@ -20,6 +20,12 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v6
 
+      - name: Load dropbox token
+        uses: mobiledevops/secret-to-file-action@v1
+        with:
+          base64-encoded-secret: ${{ secrets.DROPBOX }}
+          filename: "tokenfile.RDS"
+
       - name: Hello
         run: echo "Hello world!"
 
