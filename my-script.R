@@ -1,4 +1,5 @@
 # Example script
+library(rdrop2refreshtoken)
 
 message("Hello from R!")
 
@@ -10,6 +11,6 @@ if(file.exists("tokenfile.RDS")) {
     stop("no token file :(")
 }
 
-token <- readRDS("tokenfile.RDS")
+rdrop2refreshtoken::drop_auth("tokenfile.RDS")
 
-print(token)
+print(rdrop2refreshtoken::drop_dir())

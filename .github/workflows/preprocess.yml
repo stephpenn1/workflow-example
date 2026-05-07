@@ -17,6 +17,9 @@ jobs:
     steps:
       - run: git config --system --add safe.directory '*'
 
+      - name: Hello
+        run: echo "Hello world!"
+
       - name: Checkout repo
         uses: actions/checkout@v6
 
@@ -26,11 +29,8 @@ jobs:
           base64-encoded-secret: ${{ secrets.DROPBOX }}
           filename: "tokenfile.RDS"
 
-      - name: Hello
-        run: echo "Hello world!"
-
       - name: Install rdrop2
-        run: Rscript -e "devtools::install_github('karthik/rdrop2')"
+        run: Rscript -e "devtools::install_github('COMPASS-DOE/rdrop2refreshtoken')"
 
       - name: Use R
         run: Rscript --verbose my-script.R
