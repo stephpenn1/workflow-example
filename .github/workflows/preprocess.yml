@@ -33,7 +33,7 @@ jobs:
         run: Rscript -e "devtools::install_github('COMPASS-DOE/rdrop2refreshtoken')"
 
       - name: Update arrow package
-        run: Rscript -e "install.packages('arrow')"
+        run: Rscript -e "install.packages('arrow', version = '20.0.0')"
 
       - name: Install compasstools
         run: Rscript -e "devtools::install_github('COMPASS-DOE/compasstools')"
