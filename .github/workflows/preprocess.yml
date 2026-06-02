@@ -32,12 +32,6 @@ jobs:
       - name: Install rdrop2
         run: Rscript -e "devtools::install_github('COMPASS-DOE/rdrop2refreshtoken')"
 
-      - name: Update arrow package
-        run: Rscript -e "install.packages('arrow', version = '20.0.0')"
-
-      - name: Install compasstools
-        run: Rscript -e "devtools::install_github('COMPASS-DOE/compasstools')"
-
       - name: Use R
         run: Rscript --verbose my-script.R
 

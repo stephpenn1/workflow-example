@@ -1,6 +1,5 @@
 # Example script
 library(rdrop2refreshtoken)
-library(compasstools)
 
 datadir <- ""
 
