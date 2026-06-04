@@ -15,5 +15,3 @@ if(file.exists("tokenfile.RDS")) {
 rdrop2refreshtoken::drop_auth(new_user = FALSE, rdstoken = "tokenfile.RDS")
 
 print(rdrop2refreshtoken::drop_dir())
-
-source(process_data.R)

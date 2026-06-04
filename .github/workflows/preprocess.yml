@@ -35,8 +35,11 @@ jobs:
       - name: Install compasstools
         run: Rscript -e "devtools::install_github('COMPASS-DOE/compasstools')"
 
-      - name: Use R
+      - name: Run R setup
         run: Rscript --verbose my-script.R
+
+      - name: Run R processing
+        run: Rscript --verbose process_data.R
 
       - name: Commit and push
         run: |
