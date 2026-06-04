@@ -4,6 +4,7 @@ library(tidyr)
 library(compasstools)
 
 datadir <- "TEMPEST_PNNL_Data/Current_data"
+dtoken <- readRDS("tokenfile.RDS")
 
 ## ------------ SAPFLOW ------------
 
@@ -11,7 +12,7 @@ sf_inventory <- read_csv("inventories/sapflow_inventory copy.csv", col_types = "
 
 print(sf_inventory)
 
-sf_raw <- compasstools::process_sapflow_dir(datadir, tz = "EST", token = "tokenfile.RDS")
+sf_raw <- compasstools::process_sapflow_dir(datadir, tz = "EST", token = dtoken)
 
 print(sf_raw)
 
