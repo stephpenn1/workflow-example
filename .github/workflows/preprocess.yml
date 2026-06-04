@@ -33,7 +33,7 @@ jobs:
         run: Rscript -e "devtools::install_github('COMPASS-DOE/rdrop2refreshtoken')"
 
       - name: Install compasstools
-        run: Rscript -e "install.packages('arrow', repos='https://cran.r-project.org'); devtools::install_github('COMPASS-DOE/compasstools')"
+        run: Rscript -e "devtools::install_github('COMPASS-DOE/compasstools')"
 
       - name: Use R
         run: Rscript --verbose my-script.R
