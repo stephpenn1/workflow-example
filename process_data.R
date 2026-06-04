@@ -1,3 +1,7 @@
+library(readr)
+library(dplyr)
+library(tidyr)
+library(compasstools)
 
 ## ------------ SAPFLOW ------------
 
