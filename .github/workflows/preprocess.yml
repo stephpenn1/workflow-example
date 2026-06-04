@@ -36,7 +36,7 @@ jobs:
         run: Rscript -e "devtools::install_github('COMPASS-DOE/compasstools')"
 
       - name: Install tidyverse
-        run: Rscript -e "install.packages("tidyverse")"
+        run: Rscript -e "install.packages('tidyverse', repos='https://cran.r-project.org')"
 
       - name: Run R setup
         run: Rscript --verbose my-script.R
