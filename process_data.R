@@ -9,7 +9,11 @@ datadir <- "TEMPEST_PNNL_Data/Current_data"
 
 sf_inventory <- read_csv("inventories/sapflow_inventory copy.csv", col_types = "ccdcdddclc")
 
+print(sf_inventory)
+
 sf_raw <- compasstools::process_sapflow_dir(datadir, tz = "EST", token = "tokenfile.RDS")
+
+print(sf_raw)
 
 sf_raw %>%
     left_join(sf_inventory, by = c("Logger", "Port")) %>%
