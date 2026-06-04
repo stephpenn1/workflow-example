@@ -1,6 +1,6 @@
 # Example script
 library(rdrop2refreshtoken)
-#library(compasstools)
+library(compasstools)
 
 message("Hello from R!")
 
@@ -16,4 +16,4 @@ rdrop2refreshtoken::drop_auth(new_user = FALSE, rdstoken = "tokenfile.RDS")
 
 print(rdrop2refreshtoken::drop_dir())
 
-#source(process_data.R)
+source(process_data.R)
