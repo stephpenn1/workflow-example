@@ -3,6 +3,8 @@ library(dplyr)
 library(tidyr)
 library(compasstools)
 
+datadir <- "TEMPEST_PNNL_Data/Current_data"
+
 ## ------------ SAPFLOW ------------
 
 sf_inventory <- read_csv("inventories/sapflow_inventory copy.csv", col_types = "ccdcdddclc")
