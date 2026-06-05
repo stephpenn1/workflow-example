@@ -33,7 +33,7 @@ jobs:
         run: Rscript -e "devtools::install_github('COMPASS-DOE/rdrop2refreshtoken')"
 
       - name: Install compasstools
-        run: Rscript -e "devtools::install_github('COMPASS-DOE/compasstools')"
+        run: Rscript -e "devtools::install_github('COMPASS-DOE/compasstools', ref = 'bypass-dropdir')"
 
       - name: Install tidyverse
         run: Rscript -e "install.packages('tidyverse', repos='https://cran.r-project.org')"
