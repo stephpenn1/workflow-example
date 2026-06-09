@@ -31,7 +31,6 @@ jobs:
 
       - name: Install rdrop2
         run: Rscript -e "devtools::install_github('COMPASS-DOE/rdrop2refreshtoken')"
-        run: Rscript -e "devtools::install_github('karthik/rdrop2')"
 
       - name: Install compasstools
         run: Rscript -e "devtools::install_github('COMPASS-DOE/compasstools', ref = 'bypass-dropdir')"
