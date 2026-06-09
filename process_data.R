@@ -38,7 +38,7 @@ if(nrow(nomatch_ports) > 0) {
 
 # Cut the memory footprint of the sapflow data by almost half and return
 select(sapflow, Plot, Timestamp, Value, Sapflow_ID, Logger, BattV_Avg, Out_Of_Plot, Species, Grid_Square) %>%
-    writeLines("sapflow.csv")
+    readr::write_csv("sapflow.csv")
 
 ## ------------ TEROS ------------
 
