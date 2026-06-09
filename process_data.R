@@ -2,6 +2,8 @@ library(readr)
 library(dplyr)
 library(tidyr)
 library(compasstools)
+library(rdrop2refreshtoken)
+library(rdrop2)
 
 datadir <- "/TEMPEST_PNNL_Data/Current_data"
 dtoken <- readRDS("tokenfile.RDS")
