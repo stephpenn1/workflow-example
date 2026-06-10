@@ -15,11 +15,7 @@ message("set directory")
 dtoken <- readRDS("tokenfile.RDS")
 message("loaded token file")
 
-print(sf_inventory)
-
 sf_raw <- compasstools::process_sapflow_dir(datadir = datadir, tz = "EST", dropbox_token = dtoken)
-
-print(sf_raw)
 
 sf_raw %>%
     left_join(sf_inventory, by = c("Logger", "Port")) %>%

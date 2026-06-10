@@ -41,11 +41,26 @@ jobs:
       - name: Install tidyverse
         run: Rscript -e "install.packages('tidyverse', repos='https://cran.r-project.org')"
 
+      - name: Install janitor
+        run: Rscript -e "install.packages('janitor', repos='https://cran.r-project.org')"
+
       - name: Run R setup
         run: Rscript --verbose my-script.R
 
-      - name: Run R processing
+      - name: Run sapflow processing
         run: Rscript --verbose process_sapflow.R
+
+      - name: Run aquatroll processing
+        run: Rscript --verbose process_aquatroll.R
+
+      - name: Run teros processing
+        run: Rscript --verbose process_teros.R
+
+      - name: Run DO processing
+        run: Rscript --verbose process_do.R
+
+      - name: Run redox processing
+        run: Rscript --verbose process_redox.R
 
       - name: Commit and push
         run: |
