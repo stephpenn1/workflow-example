@@ -45,7 +45,7 @@ jobs:
         run: Rscript --verbose my-script.R
 
       - name: Run R processing
-        run: Rscript --verbose process_data.R
+        run: Rscript --verbose process_sapflow.R
 
       - name: Commit and push
         run: |
