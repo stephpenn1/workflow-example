@@ -6,7 +6,7 @@ library(dplyr)
 library(tidyr)
 
 # This only needs to be done once
-sf_inventory <- read_csv("design-doc-copies/sapflow_inventory copy.csv", col_types = "clcdccdddc")
+sf_inventory <- read_csv("inventories/sapflow_inventory copy.csv", col_types = "clcdccdddc")
 
 #process_sapflow <- function(token, datadir) {
 
