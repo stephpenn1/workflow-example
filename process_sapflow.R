@@ -7,11 +7,13 @@ library(tidyr)
 
 # This only needs to be done once
 sf_inventory <- read_csv("inventories/sapflow_inventory copy.csv", col_types = "clcdccdddc")
+datadir <- "/TEMPEST_PNNL_Data/Current_data"
+dtoken <- readRDS("tokenfile.RDS")
 
 #process_sapflow <- function(token, datadir) {
 
-    sf_raw <- compasstools::process_sapflow_dir(datadir, tz = "EST",
-                                                token, progress)
+    sf_raw <- compasstools::process_sapflow_dir(datadir = datadir, tz = "EST",
+                                                dropbox_token = dtoken)
 
     sf_raw %>%
         left_join(sf_inventory, by = c("Logger", "Port")) %>%
