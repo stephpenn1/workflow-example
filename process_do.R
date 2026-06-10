@@ -4,6 +4,7 @@ library(readr)
 library(lubridate)
 library(dplyr)
 library(tidyr)
+library(compasstools)
 
 pattern <- "Pyro\\.dat$"
 
