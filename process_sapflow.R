@@ -6,7 +6,7 @@ library(dplyr)
 library(tidyr)
 
 # This only needs to be done once
-sf_inventory <- read_csv("inventories/sapflow_inventory copy.csv", col_types = "ccdccdddc")
+sf_inventory <- read_csv("inventories/sapflow_inventory copy.csv", col_types = "ccdcdddclc")
 message("loaded inventory")
 
 datadir <- "/TEMPEST_PNNL_Data/Current_data"
