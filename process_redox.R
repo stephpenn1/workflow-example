@@ -7,7 +7,7 @@
 # ########## #
 library(janitor)
 library(compasstools)
-library(dplyr)
+library(tidyverse)
 
 pattern <- "(ERT.*RedoxTEST|TEMPEST.*Redox15)"
 
